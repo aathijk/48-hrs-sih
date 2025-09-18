@@ -1,0 +1,30 @@
+# app.py
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+import requests
+
+API_KEY = "7da3f978e19b469c9f242446251809"
+CITY = "Chennai"
+URL = f"https://api.weatherapi.com/v1/current.json?key={API_KEY}&q={CITY}&aqi=yes"
+
+app = FastAPI()
+
+# Enable CORS so frontend can fetch from backend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For dev only, restrict in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/weather")
+def get_weather():
+    resp = requests.get(URL)
+    data = resp.json()
+    weather = {
+        "temperature": data["current"]["temp_c"],
+        "rainfall": data["current"]["precip_mm"],
+        "soil_moisture": "Adequate",  # Placeholder
+    }
+    return weather
