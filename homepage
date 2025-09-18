@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farmer Assistant</title>
+    <link rel="stylesheet" href="hp.css">
+</head>
+
+<body>
+    <!-- nav Section -->
+    <nav class="navbar">
+
+        <div class="logo"> <img id="img" src="https://clipground.com/images/agriculture-images-or-clipart-9.jpg">CropCare</div>
+        <ul class="nav-links">
+
+            <li><a href="index.html">Crop Recommendation</a></li>
+            <li><a href="disease.html">Disease Diagnosis</a></li>
+            <li><a href="index.html">Chatbot</a></li>
+            <li>
+                <a href="weather.html">Weather</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Banner Section -->
+    <header class="banner">
+        <div class="overlay">
+            <h1>🌱 Farmers: The Backbone of Our Nation</h1>
+            <p>Empowering agriculture with AI – Crop Recommendation, Disease Diagnosis, Weather Insights & Chatbot Support</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </header>
+
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+            The <strong>Smart Farmer Assistant</strong> is an AI-powered platform designed to help farmers make better decisions and improve crop yield. Our project brings together multiple technologies to solve real challenges faced by farmers.
+        </p>
+
+        <div class="work-grid">
+            <div class="work-item">
+                <h3>🌾 Crop Recommendation</h3>
+                <p>Based on soil type, weather, and location, our system suggests the most profitable crops to grow.</p>
+            </div>
+            <div class="work-item">
+                <h3>📷 Disease Diagnosis</h3>
+                <p>Farmers can upload crop images, and our AI detects possible plant diseases and recommends treatments.</p>
+            </div>
+            <div class="work-item">
+                <h3>🌦 Weather Analysis</h3>
+                <p>Integrated weather forecasting provides farmers with updates to plan irrigation and harvest schedules.</p>
+            </div>
+            <div class="work-item">
+                <h3>🤖 Chatbot Support</h3>
+                <p>A simple chatbot allows farmers to ask questions and get instant guidance about crops and farming practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>🌿 Smart Farmer Assistant | Built for Agriculture Hackathon 2025</p>
+    </footer>
+</body>
+
+</html>
