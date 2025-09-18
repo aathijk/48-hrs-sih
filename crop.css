@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url('images/farm-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #18b15259;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1 {
+    color: #804242;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-top: -170px;
+    margin-bottom: 55px;
+}
+
+.analysis-section {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Chart & details containers */
+
+.chart-container,
+.details-container {
+    flex: 1 1 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.details-container h2 {
+    color: #2f5d27;
+    margin-bottom: 20px;
+}
+
+.details-container ul {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #4a7c3e;
+}
+
+.details-container ul li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.details-container p {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #2f5d27;
+}
+
+.card-glow {
+    border: 2px solid rgba(76, 175, 80, 0.5);
+    box-shadow: 0 0 30px rgba(76, 175, 80, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
