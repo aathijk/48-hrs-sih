@@ -1,0 +1,41 @@
+async function fetchWeatherData() {
+    try {
+        const response = await fetch('http://localhost:8000/weather');
+        const data = await response.json();
+
+        // Update textual weather details
+        document.getElementById('tempDetail').innerHTML =
+            `<img src="https://img.icons8.com/fluency/48/temperature.png" /> Temperature: ${data.temperature} °C`;
+        document.getElementById('rainDetail').innerHTML =
+            `<img src="https://img.icons8.com/color/48/rain.png" /> Rainfall: ${data.rainfall} mm`;
+        document.getElementById('soilDetail').innerHTML =
+            `<img src="https://img.icons8.com/fluency/48/plant-under-sun.png" /> Soil Moisture: ${data.soil_moisture}`;
+
+        // Render Chart.js graph
+        const ctx = document.getElementById('weatherChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Temperature (°C)', 'Rainfall (mm)', 'Soil Moisture (%)'],
+                datasets: [{
+                    label: 'Weather Metrics',
+                    data: [data.temperature, data.rainfall, 70], // Soil moisture % placeholder
+                    backgroundColor: ['#f44336', '#2196f3', '#43a047']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+// Call the function on page load
+window.onload = fetchWeatherData;
