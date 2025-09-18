@@ -1,0 +1,159 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f0fdf4;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1d6036;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #bbf7d0;
+}
+
+
+/* Banner */
+
+.banner {
+    background: url("https://img.freepik.com/premium-photo/smart-farming-precision-agriculture-sustainable-food-production-solid-color-background_964851-1787.jpg?w=740") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.banner .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.banner h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #16a34a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #166534;
+}
+
+
+/* About Us */
+
+.about {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: #15803d;
+    font-size: 2rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.work-item {
+    background: #ecfdf5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.work-item h3 {
+    color: #166534;
+    margin-bottom: 10px;
+}
+
+.work-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 128, 0, 0.2);
+    background: #d1fae5;
+}
+
+#img {
+    height: 55px;
+    margin-left: 3px;
+    margin-right: 20px;
+    margin-right: 16px;
+    margin-top: -4px;
+    margin-bottom: -17px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #1d6036;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
