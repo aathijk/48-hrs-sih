@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Analysis</title>
+    <link rel="stylesheet" href="crop.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Crop Analysis</h1>
+        <div class="analysis-section">
+            <!-- Left: Chart -->
+            <div class="chart-container card card-glow">
+                <canvas id="cropChart"></canvas>
+            </div>
+            <!-- Right: Details -->
+            <div class="details-container card card-glow">
+                <h2>Crop Details</h2>
+                <ul id="cropDetails">
+                    <li>Water Level: --%</li>
+                    <li>Nutrients: --%</li>
+                    <li>Sunlight Exposure: --%</li>
+                    <li>Pest Resistance: --%</li>
+                    <li>Growth Rate: --%</li>
+                </ul>
+                <p id="statusText">Analyzing crop data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="crscript.js"></script>
+</body>
+
+</html>
